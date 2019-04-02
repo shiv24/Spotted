@@ -1,0 +1,9 @@
+body {
+  background-color: #b2ebf9;
+}
+
+.createThread {
+  display: grid;
+  place-items: center;
+  height: 80vh;
+}
