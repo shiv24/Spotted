@@ -1,0 +1,12 @@
+.map-display {
+  width: "100%";
+  marginleft: 0;
+}
+
+#go-home-button {
+  height: 50px;
+  width: 100px;
+  position: relative;
+  left: 50%;
+  margin-top: 50%;
+}

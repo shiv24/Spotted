@@ -1,8 +1,8 @@
 body {
-  background-color: #b2ebf9;
+  background-color: white;
 }
 
-.createThread {
+.Landing {
   display: grid;
   place-items: center;
   height: 80vh;
