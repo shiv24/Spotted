@@ -16,7 +16,7 @@ class Home extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   componentDidMount() {
-    const { locale } = this.props.location.state.area;
+    // const { locale } = this.props.location.state.area;
     let messagesRef = firebase.database().ref("comments");
     messagesRef.on("child_added", snapshot => {
       let comment = { text: snapshot.val(), id: snapshot.key };
@@ -55,7 +55,7 @@ class Home extends Component {
         <header className="Landing-header">
           <h1>Spotted</h1>
         </header>
-        <h5> Current Threads in {this.props.location.state.area} </h5>
+        <h5> Current Threads in {this.props.location.state.area}</h5>
         <div className="openThreads">
           <form onSubmit={this.handleSubmit}>
             <input
@@ -67,14 +67,15 @@ class Home extends Component {
             <button type="submit" className="tCreate">
               {"Add Comment"}
             </button>
+            <ul>
+              {/* Render the list of messages */
+              this.state.thread.map(message => (
+                <li class="comment" key={message.id}>
+                  {message.text.comment}
+                </li>
+              ))}
+            </ul>
           </form>
-
-          <ul>
-            {/* Render the list of messages */
-            this.state.thread.map(message => (
-              <li key={message.id}>{message.text.comment}</li>
-            ))}
-          </ul>
         </div>
       </div>
     );

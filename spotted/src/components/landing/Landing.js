@@ -26,18 +26,17 @@ class Landing extends Component {
             Are you 18 years or older
             <input type="checkbox" />
           </h5>
-          <button>
-            <Link
-              to={{
-                pathname: "/home",
-                state: {
-                  area: "Toronto"
-                }
-              }}
-            >
-              Go
-            </Link>
-          </button>
+
+          <Link
+            to={{
+              pathname: "/locale",
+              state: {
+                area: "Toronto"
+              }
+            }}
+          >
+            <button>Go</button>
+          </Link>
         </form>
       </div>
     );
